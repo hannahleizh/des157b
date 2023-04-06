@@ -1,15 +1,25 @@
+/* font-family: 'Bitter', serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Paytone One', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Rubik Iso', cursive;
+font-family: 'Rubik Mono One', sans-serif; */
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #333;
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
     color: rgb(235, 235, 235);
     transition: all 2s;
 }
 
 body.switch {
-    background-color: rgb(235, 235, 235);
+    background: #1f162c;
     color: #333;
 }
 
@@ -33,11 +43,18 @@ header {
     width: 1100px;
     height: 250px;
     margin: auto;
-    background-color: rgb(235, 235, 235);
-    color: #333;
+    background: #fcdd6d;    
+    border-radius: 32px;
     overflow: hidden;
     display: grid;
-	place-items: center;
+}
+
+#banner h1 {
+    color: #806201;
+}
+
+#banner h2 {
+    color: #9D7A07;
 }
 
 #banner.switch {
