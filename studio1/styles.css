@@ -1,0 +1,96 @@
+/* body {
+    background-image: url(images/movie.jpeg);
+    width: 1200px;
+    height: 750px;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(44, 62, 79);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: antiquewhite;
+}
+
+#myVideo {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: -260px;
+    min-width: 60%;
+    min-height: 60%;
+}
+
+#poem p {
+    position: absolute;
+    padding: 1em;
+    font-size: 4em;
+    background-color: black;
+    transition: all 1s;
+}
+
+#line1 {
+    font-size: 5em;
+    bottom: 50%;
+    left: 10%;
+}
+
+#line2 {
+    bottom: 40%;
+    left: 10%;
+}
+
+#line3 {
+    bottom: 30%;
+    left: 10%;
+}
+
+.fa-paw {
+    position: absolute;
+    top: 45px;
+    left: 32%;
+    font-size: 50px;
+    color: rgb(243, 248, 255);
+}
+
+.fa-paw:hover {
+    cursor: pointer;
+    font-size: 60px;
+    transition: ease 1.5s;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.showing {
+    opacity: 1;
+}
+/* add .fa-dove declarations here, and define the animation */
+.fa-dove {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 36px;
+    color: antiquewhite;
+    transform: translate(-50%, -50%);
+    animation: bird 2s infinite alternate ease-in-out;
+}
+
+@keyframes bird {
+    0% {
+        opacity: .5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .5;
+        transform: scale(1.5);
+    }
+}
