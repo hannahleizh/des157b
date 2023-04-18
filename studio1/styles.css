@@ -27,10 +27,12 @@ body {
 
 #poem p {
     position: absolute;
-    padding: 1em;
+    padding: .7em;
     font-size: 4em;
-    background-color: black;
-    transition: all 1s;
+    background-color: rgba(250, 235, 215, 0.86);
+    color: rgb(44, 62, 79);
+    border-radius: 15px;
+    transition: all .5s;
 }
 
 #line1 {
@@ -41,12 +43,12 @@ body {
 
 #line2 {
     bottom: 40%;
-    left: 10%;
+    left: 15%;
 }
 
 #line3 {
     bottom: 30%;
-    left: 10%;
+    left: 20%;
 }
 
 .fa-paw {
@@ -54,7 +56,7 @@ body {
     top: 45px;
     left: 32%;
     font-size: 50px;
-    color: rgb(243, 248, 255);
+    color: antiquewhite;
 }
 
 .fa-paw:hover {
