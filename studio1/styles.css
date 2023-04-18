@@ -65,6 +65,20 @@ body {
     transition: ease 1.5s;
 }
 
+a .fa-house {
+    position: absolute;
+    top: 45px;
+    left: 23%;
+    font-size: 49px;
+    color: antiquewhite;
+}
+
+a .fa-house:hover {
+    cursor: pointer;
+    font-size: 59px;
+    transition: ease 1.5s;
+}
+
 .hidden {
     opacity: 0;
 }

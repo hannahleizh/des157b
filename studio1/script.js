@@ -4,6 +4,7 @@
 
     const myVideo = document.querySelector('#myVideo');
     const fs = document.querySelector('.fa-paw');
+    const home = document.querySelector('.fa-house');
 
     // add the loading icon variable here
     const line1 = document.querySelector('#line1');
