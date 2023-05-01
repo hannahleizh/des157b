@@ -1,0 +1,56 @@
+{
+    "point 1" : {
+        "food" : "marble cake",
+        "time" : "friday evening",
+        "mood" : 0
+    },
+
+    "point 2" : {
+        "food" : "champagne",
+        "time" : "friday night",
+        "mood" : 1
+
+    },
+
+    "point 3" : {
+        "food" : "dimsum",
+        "time" : "saturday morning",
+        "mood" : 2
+    },
+
+    "point 4" : {
+        "food" : "charcuterie board",
+        "time" : "saturday evening",
+        "mood" : 3
+    },
+    
+    "point 5" : {
+        "food" : "champagne",
+        "time" : "saturday night",
+        "mood" : 1
+    },
+
+    "point 6" : {
+        "food" : "leftover charcuterie board breakfast, + eggs",
+        "time" : "sunday morning",
+        "mood" : 4
+    },
+
+    "point 7" : {
+        "food" : "rose almond latte",
+        "time" : "sunday afternoon",
+        "mood" : 5
+    },
+
+    "point 8" : {
+        "food" : "steak dinner with salad and sweet potato",
+        "time" : "sunday evening",
+        "mood" : 6
+    },
+
+    "point 9" : {
+        "food" : "chocolate vanilla cheesecake",
+        "time" : "sunday night",
+        "mood" : 0
+    }
+}
