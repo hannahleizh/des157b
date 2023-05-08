@@ -1,62 +1,61 @@
 // JS here
+Parse.initialize("0rcY5EBhPOX46SxrozcqDnPkEIBpmaOVIeuGiHLB", "9v6nHV3M3HncKhwq8xhtrl6wdpB0K1qtC2tPzh7r"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+Parse.serverURL = 'https://parseapi.back4app.com/'
 
-(function () {
 
-    Parse.initialize("0rcY5EBhPOX46SxrozcqDnPkEIBpmaOVIeuGiHLB","9v6nHV3M3HncKhwq8xhtrl6wdpB0K1qtC2tPzh7r"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
-    Parse.serverURL = 'https://parseapi.back4app.com/';
+const newBtn = document.getElementById('newbtn');
+const editBtns = document.querySelectorAll('.fa-edit');
+const addFriendForm = document.getElementById('add-friend');
+const editFriendForm = document.getElementById('edit-friend');
+const friendList = document.querySelector('main ol');
 
-    const newBtn = document.getElementById('newbtn');
-    const editBtns = document.querySelectorAll('.fa-edit');
-    const addFriendForm = document.getElementById('add-friend');
-    const editFriendForm = document.getElementById('edit-friend');
-    const friendList = document.querySelector('main ol');
+newBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+    addFriendForm.className = 'add-friend-onscreen';
+})
 
-    newBtn.addEventListener('click', function(event){
+addFriendForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    addFriendForm.className = "add-friend-offscreen";
+});
+
+for (let i = 0; i < editBtns.length; i++) {
+    editBtns[i].addEventListener('click', function (event) {
         event.preventDefault();
-        addFriendForm.className = 'add-friend-onscreen';
+        editFriendForm.className = "edit-friend-onscreen";
     })
+}
 
-    addFriendForm.addEventListener('submit', function(event){
-        event.preventDefault();
-        addFriendForm.className = "add-friend-offscreen";
-    });
+editFriendForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    editFriendForm.className = "edit-friend-offscreen";
+});
 
-    for (let i = 0; i < editBtns.length; i++){
-        editBtns[i].addEventListener('click', function(event){
-            event.preventDefault();
-            editFriendForm.className = "edit-friend-onscreen";
-        })
-    }
+async function displayFriends() {
+    const friends = Parse.Object.extend('Friends');
+    const query = new Parse.Query(friends);
+    const results = await query.ascending('lname').find();
+    // console.log(results);
+}
 
-    editFriendForm.addEventListener('submit', function(event){
-        event.preventDefault();
-        editFriendForm.className = "edit-friend-offscreen";
-    });
+// displayFriends();
 
-    async function displayFriends() {
-        const friends = Parse.Object.extend('Friends');
-        const query = new Parse.Query(friends);
-        const results = await query.ascending('lname').find();
-        // console.log(results);
-    }
+try {
+    results.forEach(function (eachFriend) {
+        const id = eachFriend.id;
+        const lname = eachFriend.get('lname');
+        const fname = eachFriend.get('fname');
+        const email = eachFriend.get('email');
+        const facebook = eachFriend.get('facebook');
+        const twitter = eachFriend.get('twitter');
+        const instagram = eachFriend.get('instagram');
+        const linkedin = eachFriend.get('linkedin');
+    
 
-    // displayFriends();
-
-    try {
-        results.forEach(function(eachFriend) {
-            const id = eachFriend.id;
-            const lname = eachFriend.get('lname');
-            const fname = eachFriend.get('fname');
-            const email = eachFriend.get('email');
-            const facebook = eachFriend.get('facebook');
-            const twitter = eachFriend.get('twitter');
-            const instagram = eachFriend.get('instagram');
-            const linkedin = eachFriend.get('linkedin');
-
-            // add the lines below...
-            const theListItem = document.createElement('li');
-            theListItem.setAttribute('id', `r-${id}`);
-            theListItem.innerHTML = ` 
+        // add the lines below...
+        const theListItem = document.createElement('li');
+        theListItem.setAttribute('id', `r-${id}`);
+        theListItem.innerHTML = ` 
                 <div class="name">${fname} ${lname}</div>
                 <div class="email">
                     <i class="fas fa-envelope-square"></i> ${email}
@@ -68,14 +67,12 @@
                     <a href="${linkedin}"><i class="fab fa-linkedin"></i></a>
                 </div>
                 <i class="fas fa-edit" id="e-${id}"></i>
-                <i class="fas fa-times-circle" id="d-${id}"></i> `;
+                <i class="fas fa-times-circle" id="d-${id}"></i> `
 
-                friendList.append(theListItem);
-    })
-    } catch (error) {
-        console.error('Error while fetching friends', error);
-    }
+        friendList.append(theListItem);
+    });
 
-
-})();
+} catch (error) {
+    console.error('Error while fetching friends', error);
+}
 
