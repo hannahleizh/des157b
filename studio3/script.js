@@ -1,5 +1,20 @@
 (function(){
     'use strict';
+
+    var granimInstance = new Granim({
+    element: '#canvas-basic',
+    direction: 'left-right',
+    isPausedWhenNotInView: true,
+    states : {
+        "default-state": {
+            gradients: [
+                ['#ff9966', '#ff5e62'],
+                ['#00F260', '#0575E6'],
+                ['#e1eec3', '#f05053']
+            ]
+        }
+    }
+});
     // const drag = document.querySelectorAll(".drag-drop");
 
 // target elements with the "draggable" class
@@ -58,7 +73,7 @@ window.dragMoveListener = dragMoveListener
 // enable draggables to be dropped into this
 interact('.dropzone').dropzone({
     // only accept elements matching this CSS selector
-    accept: '#yes-drop, .drag-drop1, .drag-drop2, .drag-drop3, .drag-drop4, .drag-drop5, .drag-drop6, .drag-drop7, .drag-drop8',
+    accept: '#yes-drop, .drag-drop1, .drag-drop2, .drag-drop3, .drag-drop4, .drag-drop5, .drag-drop6',
     // Require a 75% element overlap for a drop to be possible
     overlap: 0.75,
   
@@ -93,7 +108,7 @@ interact('.dropzone').dropzone({
     }
   })
 
-  interact('.drag-drop1, .drag-drop2, .drag-drop3, .drag-drop4, .drag-drop5, .drag-drop6, .drag-drop7, .drag-drop8')
+  interact('.drag-drop1, .drag-drop2, .drag-drop3, .drag-drop4, .drag-drop5, .drag-drop6')
   .draggable({
     inertia: true,
     modifiers: [
@@ -107,54 +122,6 @@ interact('.dropzone').dropzone({
     listeners: { move: dragMoveListener }
   });
 
-  // confetti
-  document.getElementsByClassName("confetti-button")[0].addEventListener("click", () => {
-    confetti();
-    let canvas = document.createElement("canvas");
-    let container = document.getElementsByClassName("button-wrapper")[0];
-    canvas.width = 600;
-    canvas.height = 600;
-  
-    container.appendChild(canvas);
-    let confetti_button = confetti.create(canvas);
-    confetti_button().then(() => container.removeChild(canvas));
-  });
-
-//   const granimInstance = new Granim({
-//     element: '#canvas-complex',
-//     direction: 'left-right',
-//     isPausedWhenNotInView: true,
-//     states : {
-//         "default-state": {
-//             gradients: [
-//                 [
-//                     { color: '#833ab4', pos: .2 },
-//                     { color: '#fd1d1d', pos: .8 },
-//                     { color: '#38ef7d', pos: 1 }
-//                 ], [
-//                     { color: '#40e0d0', pos: 0 },
-//                     { color: '#ff8c00', pos: .2 },
-//                     { color: '#ff0080', pos: .75 }
-//                 ],
-//             ]
-//         }
-//     }
-// });
-
-const granimInstance = new Granim({
-  element: '#canvas-basic',
-  direction: 'left-right',
-  isPausedWhenNotInView: true,
-  states : {
-      "default-state": {
-          gradients: [
-              ['#FFF0A9', '#FFF0E8'],
-              ['#FFFCF8', '#EBF3FF'],
-              ['#D6EAFF', '#D5FFD3']
-          ]
-      }
-  }
-});
 
 })();
 
