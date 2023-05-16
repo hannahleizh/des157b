@@ -120,25 +120,40 @@ interact('.dropzone').dropzone({
     confetti_button().then(() => container.removeChild(canvas));
   });
 
-  var granimInstance = new Granim({
-    element: '#canvas-complex',
-    direction: 'left-right',
-    isPausedWhenNotInView: true,
-    states : {
-        "default-state": {
-            gradients: [
-                [
-                    { color: '#833ab4', pos: .2 },
-                    { color: '#fd1d1d', pos: .8 },
-                    { color: '#38ef7d', pos: 1 }
-                ], [
-                    { color: '#40e0d0', pos: 0 },
-                    { color: '#ff8c00', pos: .2 },
-                    { color: '#ff0080', pos: .75 }
-                ],
-            ]
-        }
-    }
+//   const granimInstance = new Granim({
+//     element: '#canvas-complex',
+//     direction: 'left-right',
+//     isPausedWhenNotInView: true,
+//     states : {
+//         "default-state": {
+//             gradients: [
+//                 [
+//                     { color: '#833ab4', pos: .2 },
+//                     { color: '#fd1d1d', pos: .8 },
+//                     { color: '#38ef7d', pos: 1 }
+//                 ], [
+//                     { color: '#40e0d0', pos: 0 },
+//                     { color: '#ff8c00', pos: .2 },
+//                     { color: '#ff0080', pos: .75 }
+//                 ],
+//             ]
+//         }
+//     }
+// });
+
+const granimInstance = new Granim({
+  element: '#canvas-basic',
+  direction: 'left-right',
+  isPausedWhenNotInView: true,
+  states : {
+      "default-state": {
+          gradients: [
+              ['#FFF0A9', '#FFF0E8'],
+              ['#FFFCF8', '#EBF3FF'],
+              ['#D6EAFF', '#D5FFD3']
+          ]
+      }
+  }
 });
 
 })();
