@@ -1,3 +1,85 @@
 body {
     margin: auto;
+    width: 1200px;
+    height: 750px;
+    background: linear-gradient(180deg, #A8F6FB 0%, #2CB0DA 64.43%, #A8F6FB 89.56%);
+}
+
+h1 {
+    margin-bottom: 0;
+    font-family: 'Rubik Bubbles';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 110px;
+    text-align: center;
+    color: #FFFFFF;
+
+    text-shadow: 10px rgba(130, 192, 211, 0.59);
+}
+
+h2 {
+    font-family: 'Futura';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#monster1 {
+    position: absolute;
+    left: 25%;
+    top: 48%;
+}
+
+#grass {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 160px;
+}
+
+#tree1 {
+    position: absolute;
+    top: 39%;
+    left: 0;
+}
+
+#tree2 {
+    position: absolute;
+    top: 41%;
+    left: 6%;
+}
+
+#tree3 {
+    position: absolute;
+    top: 48%;
+    right: 10%;
+}
+
+#tree4 {
+    position: absolute;
+    top: 39%;
+    right: 0;
+}
+
+footer button {
+    padding: 6px 60px;
+    gap: 10px;
+    height: 40px;
+    border: 0;
+    border-radius: 43px;
+    background: linear-gradient(180deg, #96CF84 0%, #4F9938 100%);
+}
+
+#portal {
+    position: absolute;
+    top: 678px;
+    left: 100px;
+}
+
+#howto {
+    position: absolute;
+    top: 678px;
+    right: 100px;
 }
