@@ -5,6 +5,11 @@ body {
     background: linear-gradient(180deg, #A8F6FB 0%, #2CB0DA 64.43%, #A8F6FB 89.56%);
 }
 
+button a {
+    text-decoration: none;
+    color: black;
+}
+
 header h1 {
     margin-bottom: -10px;
     /* position: absolute; 
