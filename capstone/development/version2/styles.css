@@ -172,9 +172,9 @@ footer button {
 
 #answers {
     position: absolute;
-    width: 60%;
+    width: 65%;
     height: 30%;
-    padding-top: 21%;
+    padding-top: 23%;
     padding-left: 8%;
 }
 
@@ -195,4 +195,25 @@ footer button {
 #answers button:hover {
     background: #72f730;
     box-shadow: inset 2px 9px 7px 5px #b8ffa2;
+}
+
+
+/* You did it page */
+#correct {
+    position: absolute;
+    font-size: 60px;
+    text-align: center;
+    color: black;
+    font-family: 'Futura';
+    font-weight: 600;
+}
+
+
+/* Puzzle page */
+#dragdrop {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 27px;
+    color: black;
 }
