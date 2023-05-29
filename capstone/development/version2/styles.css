@@ -1,27 +1,32 @@
 body {
     width: 750px;
     height: 1200px;
+    margin: auto;
     background: linear-gradient(180deg, #A8F6FB 0%, #2CB0DA 64.43%, #A8F6FB 89.56%);
 }
 
-h1 {
+header h1 {
     margin-bottom: -10px;
+    /* position: absolute; 
+    left: 20%; */
+    text-align: center;
     font-family: 'Rubik Bubbles';
     font-style: normal;
     font-weight: 400;
     font-size: 110px;
-    text-align: center;
     color: #FFFFFF;
 
     text-shadow: 0 0 12px rgb(83, 143, 161);
 }
-
-h2 {
+header h2 {
     font-family: 'Poppins';
+    /* position: absolute;
+    left: 33%;
+    top: 26%; */
+    text-align: center;
     font-style: normal;
     font-weight: 700;
     font-size: 34px;
-    text-align: center;
     color: #FFFFFF;
 }
 
@@ -118,6 +123,10 @@ footer button {
 
 
 /* question page */
+#questionhtml {
+    margin: 0;
+}
+
 #question {
     position: absolute;
     font-size: 60px;
@@ -210,6 +219,9 @@ footer button {
 
 
 /* Puzzle page */
+#puzzlehtml {
+    margin: 0;
+}
 #dragdrop {
     position: absolute;
     top: 10%;
