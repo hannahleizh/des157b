@@ -83,6 +83,24 @@ header h2 {
 }
 
 /* homepage buttons */
+#play {
+    position: absolute;
+    top: 42vh; 
+    left: 40%;
+    background: linear-gradient(180deg, #f2efac 0%, #fdfd17 100%);
+    border-radius: 43px;
+    border: 0;
+    padding: 15px;
+    width: 20%;
+    font-family: 'Poppins';
+    font-size: 30px;
+    text-align: center;
+}
+
+#play:hover {
+    background: linear-gradient(180deg, #fffef6 0%, #fefe6f 100%);
+}
+
 footer button {
     padding: 6px 60px;
     gap: 10px;
@@ -112,22 +130,40 @@ footer button:hover {
     right: 8%;
 }
 
-#play {
-    position: absolute;
-    top: 42vh; 
-    left: 40%;
-    background: linear-gradient(180deg, #f2efac 0%, #fdfd17 100%);
-    border-radius: 43px;
-    border: 0;
-    padding: 15px;
-    width: 20%;
-    font-family: 'Poppins';
-    font-size: 30px;
-    text-align: center;
+
+/* how to overlay */
+.hidden {
+    visibility: hidden;
+    opacity: 0;
 }
 
-#play:hover {
-    background: linear-gradient(180deg, #fffef6 0%, #fefe6f 100%);
+.showing {
+    visibility: visible;
+    opacity: 1;
+}
+
+#overlay {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+#overlay article {
+    box-sizing: border-box;
+    background-color: white;
+    padding: 20px;
+    width: 50vw;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
@@ -244,12 +280,41 @@ footer button:hover {
 
 /* You did it page */
 #correct {
-    position: absolute;
-    font-size: 60px;
+    font-size: 50px;
     text-align: center;
     color: black;
     font-family: 'Futura';
     font-weight: 600;
+    top: 40vh;
+}
+
+#confetti {
+    top: 5vh;
+    left: 40vw;
+}
+
+#puzzle {
+    /* margin: 0; */
+    position: absolute;
+    left: 25vw;
+    height: 0px;
+
+    width: 50%;
+    margin-top: 5%;
+    height: 10%;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 25px;
+
+    background: #FFD231;
+    box-shadow: inset 2px 9px 7px 5px #FFEAA2;
+    border-radius: 43px;
+    border: 0;
+}
+
+#puzzle:hover {
+    background: #72f730;
+    box-shadow: inset 2px 9px 7px 5px #b8ffa2;
 }
 
 
