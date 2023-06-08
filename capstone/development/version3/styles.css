@@ -156,56 +156,6 @@ footer button:hover {
     right: 8%;
 }
 
-
-/* how to overlay */
-.hidden {
-    visibility: hidden;
-    opacity: 0;
-}
-
-.showing {
-    visibility: visible;
-    opacity: 1;
-}
-
-#overlay {
-    position: absolute;
-    background-color: rgba(0,0,0,0.5);
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    transition-property: opacity, visibility;
-    transition-duration: 1s;
-    transition-timing-function: ease;
-    text-align: center;
-    margin: auto;
-}
-
-#overlay article {
-    box-sizing: border-box;
-    background-color: rgb(232, 255, 238);
-    border-radius: 25px;
-    padding: 20px;
-    width: 50vw;
-    height: 80vh;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Poppins';
-    padding: 60px;
-}
-
-#overlay article h1 {
-    text-align: center;
-}
-
-#overlay article p {
-    padding-bottom: 30px;
-}
-
-
 /* question page */
 #questionhtml {
     margin: 0;
@@ -256,6 +206,31 @@ footer button:hover {
 }
 
 #hint:hover {
+    background: linear-gradient(180deg, #e7f1e3 0%, #c6ffaa 100%);
+}
+
+#seal {
+    position: absolute;
+    left: 0;
+    left: 5%;
+    top: 8%;
+    display: flex;
+    padding: 15px;
+    width: 14%;
+    height: 6%;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Poppins';
+    font-size: 136%;
+    font-weight: 500;
+
+    background: linear-gradient(180deg, #cdecbd 0%, #66f91c 100%);
+    border-radius: 43px;
+    border: 0;
+}
+
+#seal:hover {
     background: linear-gradient(180deg, #e7f1e3 0%, #c6ffaa 100%);
 }
 
@@ -542,6 +517,94 @@ footer button:hover {
 
 #nextq:hover {
     background: linear-gradient(180deg, #cdecbd 0%, #08dd0c 100%);
+}
+
+
+/* overlay */
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
+}
+
+#overlay {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    text-align: center;
+    margin: auto;
+    z-index: 10;
+}
+
+#overlay2 {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    text-align: center;
+    margin: auto;
+    z-index: 10;
+}
+
+#overlay article {
+    box-sizing: border-box;
+    background-color: rgb(232, 255, 238);
+    border-radius: 25px;
+    padding: 20px;
+    width: 50vw;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poppins';
+    padding: 60px;
+}
+
+#overlay2 article {
+    box-sizing: border-box;
+    background-color: rgb(232, 255, 238);
+    border-radius: 25px;
+    padding: 20px;
+    width: 50vw;
+    height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Poppins';
+    padding: 60px;
+}
+
+#overlay article h1 {
+    text-align: center;
+}
+
+#overlay2 article h1 {
+    text-align: center;
+}
+
+#overlay article p {
+    padding-bottom: 30px;
+}
+
+#overlay2 article p {
+    padding-bottom: 30px;
 }
 
 /* keep screen in place */
