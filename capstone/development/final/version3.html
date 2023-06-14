@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Inter:wght@400;600;700&family=Montserrat:wght@300;400;600;700&family=Paytone+One&family=Poppins:wght@600&family=Roboto:wght@100&family=Rubik+Bubbles&family=Rubik+Iso&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    
+    <!-- css -->
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+    
+    <!-- js -->
+    <script src="script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    
+    <title>Usability Capstone Home</title>
+</head>
+<body>
+    <header>
+        <h1 >Davis Puzzle</h1>
+        <h2>Learn about Davis history!</h2>
+    </header>
+    <main>
+        <img id="monster1" src="images/monster1.svg" alt="monster"/>
+        <img id="grass" src="images/grass.svg" alt="grass"/> 
+        <img id="tree2" src="images/tree2.svg" alt="tree2"/>
+        <img id="tree1" src="images/tree1.svg" alt="tree1"/>
+        <img id="tree3" src="images/tree3.svg" alt="tree3"/>
+        <img id="tree4" src="images/tree4.svg" alt="tree4"/>
+
+        <button id="play" class="bounce2">Play</button>
+        <div id="fadeOut"></div>
+
+    </main>
+    <footer>
+        <button id="portal"><a href="https://www.cityofdavis.org/city-hall/city-manager-s-office/arts-culture/davis-centennial-seal">Davis Seal</a></button>
+        <button id="howto">How to Play</button>
+
+
+        <section id="overlay" class="hidden">
+            <article>
+                <lord-icon
+                    src="https://cdn.lordicon.com/wiqmayhq.json"
+                    trigger="loop"
+                    colors="outline:#121331,primary:#ffc738,secondary:#92140c"
+                    style="width:250px;height:250px">
+                </lord-icon>
+
+                <h2>How to Play</h2>
+                <p>To play this game, click <b>Play</b> to start. A question will pop up on the screen where you can select an answer, and once you answer correctly, drag and drop a puzzle piece into the puzzle!</p>
+            
+                <button class="close">Close</button>
+            </article>
+        </section>
+
+    </footer>
+</body>
+</html>

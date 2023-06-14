@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Inter:wght@400;600;700&family=Montserrat:wght@300;400;600;700&family=Paytone+One&family=Poppins:wght@600&family=Roboto:wght@100&family=Rubik+Bubbles&family=Rubik+Iso&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    
+    <!-- css -->
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- js -->
+    <script src="script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- lordicon -->
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+
+    <title>Usability Capstone Puzzle</title>
+</head>
+<body id="puzzlehtml">
+    <header>
+        <button id="hint">Hint</button>
+
+        <h2 id="dragdrop">Drag and drop a puzzle piece to the right spot.</h2>
+    </header>
+    <div id="container">
+        <div id="boxes">
+            <div id="pieceContainer"></div>
+
+            <div id="puzzleContainer">
+                <!-- <div class="piece">
+                    <img src="images/tree1.svg" alt="piece" width="122" height="122" data-order="0">
+                </div>
+
+                <div class="piece">
+                    <img src="images/tree1.svg" alt="piece" width="122" height="122" data-order="1">
+                </div>
+
+                <div class="piece">
+                    <img src="images/tree1.svg" alt="piece" width="122" height="122" data-order="2">
+                </div>
+
+                <div class="piece">
+                    <img src="images/tree1.svg" alt="piece" width="122" height="122" data-order="3">
+                </div>
+
+                <div class="piece">
+                    <img src="images/tree1.svg" alt="piece" width="122" height="122" data-order="4">
+                </div>
+
+                <div class="piece">
+                    <img src="images/tree1.svg" alt="piece" width="122" height="122" data-order="5">
+                </div>
+
+                <div class="piece">
+                    <img src="images/tree1.svg" alt="piece" width="122" height="122" data-order="6">
+                </div>
+
+                <div class="piece">
+                    <img src="images/tree1.svg" alt="piece" width="122" height="122"  data-order="7">
+                </div>
+
+                <div class="piece">
+                    <img src="images/tree1.svg" alt="piece" width="122" height="122"  data-order="8">
+                </div> -->
+            </div>
+        </div>
+
+        <button id="btnStart">Start</button>
+        <div id="btnResetComplete">
+            <button id="btnReset">Reset</button>
+            <button id="btnComplete">Complete</button>
+        </div>
+
+        <div id="completedPuzzle">
+            <lord-icon
+                src="https://cdn.lordicon.com/xxdqfhbi.json"
+                trigger="loop"
+                colors="primary:#121331,secondary:#ffc738,tertiary:#4bb3fd"
+                style="width:230px;height:230px" id="confetti">
+            </lord-icon>
+            <p>Good job!</p>
+            <button id="nextq">Next Question</button>
+        </div>
+
+        <!-- <img id="monster2" src="images/monster2.svg" alt="monster2"/> -->
+    </div>
+</body>
+</html>
